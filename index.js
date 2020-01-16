@@ -9,9 +9,9 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(item) {
+function addToCart(itemName) {
  // write your code here
- var itemObj = {itemName:`${item}`, itemPrice: Math.floor(Math.random()*100)};
+ var itemObj = {itemName:`${itemName}`, itemPrice: Math.floor(Math.random()*100)};
  cart.unshift(itemObj);
  return itemObj.itemName + " has been added to your cart."
 }
@@ -49,7 +49,7 @@ function removeFromCart(item) {
       return cart
     }
   }
-if (item != cart[item]){
+  if (item != cart[item]){
     return "That item is not in your cart."
   }
 }
