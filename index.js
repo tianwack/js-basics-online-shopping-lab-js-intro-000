@@ -34,10 +34,8 @@ function viewCart() {
 }
 
 function total() {
-  console.log(cart);
   var total = 0;
   for(var i = 0; i < cart.length; i++) {
-    console.log(cart[i]);
     total = cart[i].itemPrice + total;
   }
   return total;
