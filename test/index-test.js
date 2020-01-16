@@ -113,8 +113,7 @@ describe("total()", function() {
     const urchinCost = getCart()[2].itemPrice;
 
     totalCost += urchinCost;
-    expect(getCart().length).toBe(3);
-    expect(total()).toBe(totalCost);
+å    expect(total()).toBe(totalCost);
   });
 });
 
