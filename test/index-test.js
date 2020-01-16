@@ -106,7 +106,7 @@ describe("total()", function() {
     const tarragonCost = getCart()[1].itemPrice;
 
     let totalCost = sorghumCost + tarragonCost;
-
+    expect(getCart().length).toBe(2);
     expect(total()).toBe(totalCost);
 
     addToCart("urchin");
@@ -146,7 +146,7 @@ describe("removeFromCart()", function() {
 
 describe("placeOrder()", function() {
   it("doesn't place the order if a credit card number is not provided", function() {
-    
+
     expect(placeOrder()).toEqual("Sorry, we don't have a credit card on file for you.");
   });
 
@@ -156,7 +156,7 @@ describe("placeOrder()", function() {
     const cartTotal = total();
     const cardNumber = Math.floor(Math.random() * 100000000);
 
-    
+
 
     expect(placeOrder(cardNumber)).toEqual(`Your total cost is $${cartTotal}, which will be charged to the card ${cardNumber}.`);
   });
